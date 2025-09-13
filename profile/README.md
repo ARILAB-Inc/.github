@@ -109,19 +109,20 @@ To avoid confusion, here’s how we’ll work with agents phase by phase.
 
 ```mermaid
 flowchart TD
-  A[Gemini / ChatGPT] -->|One-off answers| B[Why not enough?]
+  A[Gemini / ChatGPT] -->|One-off answers| B[Why not enough]
   B --> C[Nuance, Persistence, Orchestration, Action, Moat]
 
   subgraph AGENTS[AriLab Agent Workflow]
-    D[Phase 1: No-Code Prototype (48h validation cycles)]
-    E[Phase 2: Code-based Agent (scalable + reusable)]
-    F[Phase 3: CoreLab Integration (system of agents)]
+    D[Phase 1: No-Code Prototype - 48h validation cycle]
+    E[Phase 2: Code-based Agent - scalable and reusable]
+    F[Phase 3: CoreLab Integration - system of agents]
   end
 
   C --> D
   D --> E
   E --> F
-  F --> G[Impact: Ventures, Insights, Real-World Change]
+  F --> G[Impact: Ventures, Insights, Real World Change]
+
 ```
 
 ---
@@ -132,7 +133,6 @@ flowchart TD
 * **Phase 2** = coded + reusable (make it scalable).
 * **Phase 3** = integrated (becomes part of CoreLab engine).
 
-✨ AriLab’s strength isn’t just ideas. It’s the **system** that turns ideas into **impact**.
+**✨ AriLab’s strength isn’t just ideas. It’s the **system** that turns ideas into **impact**.**
 
-```
 
