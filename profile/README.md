@@ -192,26 +192,42 @@ arilab-platform/
 
 ## 🚀 How to Use
 
-### 1. Create a New Agent Repo
+### 1. Create a New Agent Repo (Fork or Branch)
+- Go to the [AriLab-Inc](https://github.com/ARILAB-Inc) organization page.  
+- Find the repo for your assigned agent (e.g., `Market-Research-Agent`).  
+- If **forking is enabled**:  
+  - Click **Fork** → create your copy under your own GitHub account (keep it private).  
+  - Work on your fork, then open a **Pull Request (PR)** back to the org repo.  
+- If **forking is disabled**:  
+  - Create a **feature branch** directly in the org repo (e.g., `feat/agent-update`).  
+  - Push your changes to that branch, then open a PR.
 
-* Go to **GitHub → “Use this template” → `agent-template/`**.
-* Repo will auto-include:
+---
 
-  * `docs/opportunity.md` + `docs/validation.md`
-  * Dockerfile + CI/CD workflow
-  * README boilerplate
+### 2. Work in 48h Validation Cycles
+- **Phase 1 (No-Code)** → Build your agent workflow using tools like **n8n**, **Zapier**, or **Langflow**.  
+- Save results in `/docs/opportunity.md` (what problem you’re testing) and `/docs/validation.md` (results after 48h).  
+- Raise a PR with your findings.  
 
-### 2. Run a 48h Validation Cycle
+---
 
-* Copy `/docs/template/opportunity.md` into `/docs/opportunity-cycle-1.md`.
-* Run validation with **free tools + Gemini API**.
-* Log outcomes in `/docs/validation.md`.
+### 3. Moving to Code
+- Once an agent proves value → migrate to **coded version** using templates in `arilab-platform`.  
+- Follow the **branching rules** (feature branches → PR → review).  
+- Always include updated validation docs in your PR.  
 
-### 3. Migrate to Code (if validated)
+---
 
-* Use the Docker + FastAPI boilerplate.
-* Connect to **Redis** (event bus) + **Postgres** (signals DB).
-* Emit/consume events following **common-schemas**.
+### 4. Reviews & Merging
+- PRs are reviewed by at least **1 other teammate + system architect**.  
+- Passing checks (lint/tests/security) are required before merge.  
+- Merged code auto-deploys to preview/staging for validation.  
+
+---
+
+✅ **In short:**  
+Every agent = starts no-code → validated in 48h → promoted to code → merged via PR.  
+
 
 ---
 
@@ -227,7 +243,7 @@ arilab-platform/
 
 ## 👥 Contribution
 
-* Fork → branch (`feat/*`, `fix/*`, `docs/*`) → PR.
+* Fork/branch (`feat/*`, `fix/*`, `docs/*`) → PR.
 * Keep validation docs up to date (`/docs/`).
 * Follow CODEOWNERS for review approvals.
 
